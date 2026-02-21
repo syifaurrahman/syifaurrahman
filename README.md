@@ -11,9 +11,9 @@
 ## 🐍 Snake eating my GitHub Contributions
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/syifaurrahman/Syifaurrahman/blob/output/github-snake-dark.svg?raw=true" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/syifaurrahman/Syifaurrahman/blob/output/github-snake.svg?raw=true" />
-  <img alt="github-snake" src="https://github.com/syifaurrahman/Syifaurrahman/blob/output/github-snake.svg?raw=true" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/syifaurrahman/syifaurrahman/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/syifaurrahman/syifaurrahman/output/github-snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/syifaurrahman/syifaurrahman/output/github-snake.svg" />
 </picture>
 
 ---
