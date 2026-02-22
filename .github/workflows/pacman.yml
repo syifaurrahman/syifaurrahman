@@ -1,0 +1,43 @@
+name: Generate Pac-Man Animation
+
+on:
+  # Jalankan otomatis tiap jam 00:00 (Harian)
+  schedule:
+    - cron: '0 0 * * *'
+  
+  # Izinkan dijalankan manual dari tab Actions
+  workflow_dispatch:
+  
+  # Trigger saat ada push ke branch main
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        
+      - name: Generate Pac-Man SVG
+        uses: abozanona/pacman-contribution-graph@v2.0.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "chore: update pacman animation"
+          target_branch: output
+          output_path: dist/pacman-github-dark.svg
+          color_theme: "github-dark"
+
+      - name: Generate Pac-Man SVG (Light Mode)
+        uses: abozanona/pacman-contribution-graph@v2.0.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "chore: update pacman animation (light)"
+          target_branch: output
+          output_path: dist/pacman-github-light.svg
+          color_theme: "github-light"
