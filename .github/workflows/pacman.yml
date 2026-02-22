@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Generate Pac-Man SVG
-        uses: abozanona/pacman-contribution-graph@v3.1.2
+        uses: abozanona/pacman-contribution-graph@v2.3.00.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: "chore: update pacman animation"
@@ -34,7 +34,7 @@ jobs:
           color_theme: "github-dark"
 
       - name: Generate Pac-Man SVG (Light Mode)
-        uses: abozanona/pacman-contribution-graph@v3.1.2
+        uses: abozanona/pacman-contribution-graph@v2.3.00.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: "chore: update pacman animation (light)"
